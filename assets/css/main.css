@@ -1,0 +1,129 @@
+/**************************************/
+/********* IMPORT DES POLICES *********/
+/**************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Medula+One&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+
+/**************************************/
+/*********** VARIABLES CSS ************/
+/**************************************/
+
+:root {
+    /* Couleurs Charte Graphique */
+    --primaryColor: #0b0a0b;
+    --secondaryColor: #ffffff;
+    --tertiaryColor: #DE2621;
+
+    /* Polices Charte Graphique */
+    /* Utilisée comme police principale : pour les titres, sous-titres et informations mis en avant : graisse Regular uniquement */
+    --primaryFontFamily: "Medula One", system-ui;
+    --primaryFontWeight: 400;
+    --primaryFontstyle: normal;
+    /* Utilisée pour : le corps de texte, paragraphe, notes et légendes */
+    --secondaryFontFamily: "Helvetica Neue", sans-serif;
+    --secondaryFontWeight-Light: 300;
+    --secondaryFontWeight-Regular: 400;
+    --secondaryFontWeight-TextBold: 700;
+    --secondaryFontWeight-DisplayBold: 900;
+}
+
+
+/**************************************/
+/**************  MAIN  ****************/
+/**************************************/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--secondaryFontFamily);
+    font-weight: var(--secondaryFontWeight-Regular);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/Kristel-173-07-0084.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar {
+    display:flex ; 
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    width:100%;
+    transition: all 1000ms ease; 
+}
+
+.navbar img {
+    width: 180px;
+}
+
+.navbar_link-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar_link-items {
+    font-family:  var(--primaryFontFamily);
+    font-weight: var(--primaryFontWeight);
+    font-style: var(--primaryFontstyle);
+    text-transform: uppercase;
+    font-size: 1.7em;
+    transform: scale(1);
+    transition: all 1000ms ease;      
+}
+
+.navbar_link-items:hover {
+    transform: scale(1.2);
+    transition: all 1000ms ease;   
+}
+
+.navbar_link-items a {
+    margin: 0 20px;
+    color: var(--tertiaryColor);
+    text-decoration: none;
+    /* -webkit-text-stroke: 1px var(--primaryColor);  */
+    transition: all 1000ms ease;   
+}
+.navbar_link-items a:hover {
+    color: var(--primaryColor);
+    transition: all 1000ms ease; 
+}
+
+.bottomHeader {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;   
+}
+
+.bottomHeader_socialNetwork {
+    display: flex;
+    gap: 35px;
+}
+
+.bottomHeader_socialNetwork a {
+    transform: scale(1);
+    transition: all 1000ms ease; 
+}
+
+.bottomHeader_socialNetwork a:hover {
+    transform: scale(1.3);
+    transition: all 1000ms ease; 
+}
+
+
+main {
+    background-color: var(--primaryColor);
+}
