@@ -93,12 +93,24 @@ header {
     margin: 0 20px;
     color: var(--tertiaryColor);
     text-decoration: none;
-    /* -webkit-text-stroke: 1px var(--primaryColor);  */
     transition: all 1000ms ease;   
 }
 .navbar_link-items a:hover {
     color: var(--primaryColor);
     transition: all 1000ms ease; 
+}
+
+.icones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 900px;
+    
+}
+
+.icones img {
+    height: 500px;
+    width: auto;
 }
 
 .bottomHeader {
