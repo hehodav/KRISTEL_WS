@@ -20,6 +20,7 @@
     /* Utilisée comme police principale : pour les titres, sous-titres et informations mis en avant : graisse Regular uniquement */
     --primaryFontFamily: "Medula One", system-ui;
     --primaryFontWeight: 400;
+    --primaryFontWeightBold: 600;
     --primaryFontstyle: normal;
     /* Utilisée pour : le corps de texte, paragraphe, notes et légendes */
     --secondaryFontFamily: "Helvetica Neue", sans-serif;
@@ -52,7 +53,8 @@ header {
     background-image: url("../img/Kristel-173-07-0084.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    box-sizing: border-box;
+    background-position: top -50px;
     height: 100vh;
 }
 
@@ -66,7 +68,8 @@ header {
 }
 
 .navbar img {
-    width: 180px;
+    width: 200px;
+    height: auto;
 }
 
 .navbar_link-list {
@@ -75,8 +78,8 @@ header {
 }
 
 .navbar_link-items {
-    font-family:  var(--primaryFontFamily);
-    font-weight: var(--primaryFontWeight);
+    font-family: var(--primaryFontFamily);
+    font-weight: var(--primaryFontWeightBold);
     font-style: var(--primaryFontstyle);
     text-transform: uppercase;
     font-size: 1.7em;
@@ -102,10 +105,9 @@ header {
 
 .icones {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 900px;
-    
+    margin-left: 150px;
 }
 
 .icones img {
@@ -117,7 +119,7 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;   
+    margin: 0 20px;   
 }
 
 .bottomHeader_socialNetwork {
