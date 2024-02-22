@@ -57,6 +57,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed; 
+    z-index: 1;
     width:100%;
     transition: all 1000ms ease; 
 }
@@ -91,7 +92,7 @@ body {
     font-weight: var(--primaryFontWeightBold);
     font-style: var(--primaryFontstyle);
     text-transform: uppercase;
-    font-size: 1.7em;
+    font-size: 2em;
     transform: scale(1);
     transition: all 1000ms ease;      
 }
@@ -165,7 +166,7 @@ header {
     width: auto;
     opacity: 0;
     transform: scale(0);
-    transition: all 3000ms ease; 
+    transition: all 5000ms ease; 
 }
 
 .bottomHeader {
@@ -190,9 +191,14 @@ header {
     transition: all 1000ms ease; 
 }
 
+audio::-webkit-media-controls-enclosure {
+    border-radius: 12px;    
+}
+
 .audio-player {
     border: 3px solid var(--tertiaryColor);
-    border-radius: 30px;
+    border-radius: 12px;  
+    height: 31px;
 }
 
 /**************************       MAIN     *****************************/
@@ -201,7 +207,139 @@ main {
     background-color: var(--primaryColor);
 }
 
+main h1 {
+    font-family: var(--primaryFontFamily);
+    font-weight: var(--primaryFontWeightBold);
+    font-style: var(--primaryFontstyle);
+    font-size: 4em;
+    text-transform: uppercase;
+}
 
+main h2 {
+    font-family: var(--primaryFontFamily);
+    font-weight: var(--primaryFontWeightBold);
+    font-style: var(--primaryFontstyle);
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+
+.group, .news
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondaryColor);
+    padding: 40px 0;
+    margin: 0 30px;
+}
+
+.group h1, .news h1 {
+    color: var(--tertiaryColor);
+}
+
+.group > img {
+    height: 70px;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.group-history {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 30px 20px 0;
+    box-shadow: 5px 5px 5px var(--tertiaryColor);
+    margin-bottom: 50px;
+}
+
+.group img:hover {
+    cursor: pointer;
+}
+
+.group-history-content {
+    display: flex;
+    gap: 50px;
+}
+
+.group-history-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.group-history-footer img, .members-cards-footer img {
+    height: 50px;
+    width: auto;
+}
+
+.group-history-footer img:hover, .members-cards-footer img:hover {
+    cursor: pointer;
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.members-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.members-cards > img {
+    height: 300px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px var(--tertiaryColor);
+}
+
+.members-cards-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.members-cards h2 {
+    color: var(--tertiaryColor)
+}
+
+.members-cards-title > img {
+    height: 30px;
+    width: auto;
+}
+
+.members-cards-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 20px 0;
+    box-shadow: 5px 5px 5px var(--tertiaryColor);
+}
+
+.members-cards-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.concerts
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiaryColor);
+    color: var(--pimar);
+    padding: 40px 0;
+}
 
 
 /*************************************************************************
@@ -217,7 +355,7 @@ footer {
     gap: 20px;
     padding: 20px 0;
     background-color: var(--tertiaryColor);
-    color: var(--secondaryColor);
+    color: var(--primaryColor);
 } 
 
 .footer_socialNetwork {
@@ -237,11 +375,11 @@ footer {
 
 .legalNotice a {
     text-decoration: none;
-    color: var(--secondaryColor);
+    color: var(--primaryColor);
     transition: all 1000ms ease; 
 }
 
 .legalNotice a:hover {
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
     transition: all 1000ms ease;   
 }

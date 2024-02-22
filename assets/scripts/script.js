@@ -6,7 +6,6 @@
 // Sélectionne l'élément de la barre de navigation
 const navbar = document.querySelector(".navbar"); 
 const headerHeight = document.querySelector("header").height;
-console.log(headerHeight);
 
 // Ajoute un écouteur d'événement pour le défilement de la page 
 window.addEventListener("scroll", function() { 
@@ -33,44 +32,44 @@ window.addEventListener("scroll", function() {
 /**************************       HEADER     *****************************/
 
 // Survol des liens vers les réseaux sociaux
-const logoFacebook = document.querySelector("#logoFacebook");
-logoFacebook.addEventListener("mouseover", function() {
-    logoFacebook.src = "./assets/logos/facebook_black.webp";
+const logoFacebookHeader = document.querySelector("#logoFacebookHeader");
+logoFacebookHeader.addEventListener("mouseover", function() {
+    logoFacebookHeader.src = "./assets/logos/facebook_black.webp";
 })
-logoFacebook.addEventListener("mouseout", function() {
-    logoFacebook.src = "./assets/logos/facebook_red.webp";
-})
-
-const logoInstagram = document.querySelector("#logoInstagram");
-logoInstagram.addEventListener("mouseover", function() {
-    logoInstagram.src = "./assets/logos/Instagram_black.webp";
-})
-logoInstagram.addEventListener("mouseout", function() {
-    logoInstagram.src = "./assets/logos/Instagram_red.webp";
+logoFacebookHeader.addEventListener("mouseout", function() {
+    logoFacebookHeader.src = "./assets/logos/facebook_red.webp";
 })
 
-const logoTikTok = document.querySelector("#logoTikTok");
-logoTikTok.addEventListener("mouseover", function() {
-    logoTikTok.src = "./assets/logos/TikTok_black.webp";
+const logoInstagramHeader = document.querySelector("#logoInstagramHeader");
+logoInstagramHeader.addEventListener("mouseover", function() {
+    logoInstagramHeader.src = "./assets/logos/Instagram_black.webp";
 })
-logoTikTok.addEventListener("mouseout", function() {
-    logoTikTok.src = "./assets/logos/TikTok_red.webp";
-})
-
-const logoYouTube = document.querySelector("#logoYouTube");
-logoYouTube.addEventListener("mouseover", function() {
-    logoYouTube.src = "./assets/logos/YouTube_black.webp";
-})
-logoYouTube.addEventListener("mouseout", function() {
-    logoYouTube.src = "./assets/logos/YouTube_red.webp";
+logoInstagramHeader.addEventListener("mouseout", function() {
+    logoInstagramHeader.src = "./assets/logos/Instagram_red.webp";
 })
 
-const logoSpotify = document.querySelector("#logoSpotify");
-logoSpotify.addEventListener("mouseover", function() {
-    logoSpotify.src = "./assets/logos/Spotify_black.webp";
+const logoTikTokHeader = document.querySelector("#logoTikTokHeader");
+logoTikTokHeader.addEventListener("mouseover", function() {
+    logoTikTokHeader.src = "./assets/logos/TikTok_black.webp";
 })
-logoSpotify.addEventListener("mouseout", function() {
-    logoSpotify.src = "./assets/logos/Spotify_red.webp";
+logoTikTokHeader.addEventListener("mouseout", function() {
+    logoTikTokHeader.src = "./assets/logos/TikTok_red.webp";
+})
+
+const logoYouTubeHeader = document.querySelector("#logoYouTubeHeader");
+logoYouTubeHeader.addEventListener("mouseover", function() {
+    logoYouTubeHeader.src = "./assets/logos/YouTube_black.webp";
+})
+logoYouTubeHeader.addEventListener("mouseout", function() {
+    logoYouTubeHeader.src = "./assets/logos/YouTube_red.webp";
+})
+
+const logoSpotifyHeader = document.querySelector("#logoSpotifyHeader");
+logoSpotifyHeader.addEventListener("mouseover", function() {
+    logoSpotifyHeader.src = "./assets/logos/Spotify_black.webp";
+})
+logoSpotifyHeader.addEventListener("mouseout", function() {
+    logoSpotifyHeader.src = "./assets/logos/Spotify_red.webp";
 })
 
 
@@ -82,4 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
     iconesHeaderHome[0].style.opacity = '1';
     iconesHeaderHome[1].style.transform = 'scale(1)';
     iconesHeaderHome[1].style.opacity = '1';
+})
+
+/**************************       FOOTER     *****************************/
+
+// Survol des liens vers les réseaux sociaux
+const logoFacebookFooter = document.querySelector("#logoFacebookFooter");
+logoFacebookFooter.addEventListener("mouseover", function() {
+    logoFacebookFooter.src = "./assets/logos/facebook_white.png";
+})
+logoFacebookFooter.addEventListener("mouseout", function() {
+    logoFacebookFooter.src = "./assets/logos/facebook_black.webp";
+})
+
+const logoInstagramFooter = document.querySelector("#logoInstagramFooter");
+logoInstagramFooter.addEventListener("mouseover", function() {
+    logoInstagramFooter.src = "./assets/logos/Instagram_white.png";
+})
+logoInstagramFooter.addEventListener("mouseout", function() {
+    logoInstagramFooter.src = "./assets/logos/Instagram_black.webp";
+})
+
+const logoTikTokFooter = document.querySelector("#logoTikTokFooter");
+logoTikTokFooter.addEventListener("mouseover", function() {
+    logoTikTokFooter.src = "./assets/logos/TikTok_white.png";
+})
+logoTikTokFooter.addEventListener("mouseout", function() {
+    logoTikTokFooter.src = "./assets/logos/TikTok_black.webp";
+})
+
+const logoYouTubeFooter = document.querySelector("#logoYouTubeFooter");
+logoYouTubeFooter.addEventListener("mouseover", function() {
+    logoYouTubeFooter.src = "./assets/logos/YouTube_white.png";
+})
+logoYouTubeFooter.addEventListener("mouseout", function() {
+    logoYouTubeFooter.src = "./assets/logos/YouTube_black.webp";
+})
+
+const logoSpotifyFooter = document.querySelector("#logoSpotifyFooter");
+logoSpotifyFooter.addEventListener("mouseover", function() {
+    logoSpotifyFooter.src = "./assets/logos/Spotify_white.png";
+})
+logoSpotifyFooter.addEventListener("mouseout", function() {
+    logoSpotifyFooter.src = "./assets/logos/Spotify_black.webp";
 })
