@@ -83,6 +83,21 @@ document.addEventListener('DOMContentLoaded', () => {
     iconesHeaderHome[1].style.opacity = '1';
 })
 
+
+/**************************        MAIN      *****************************/
+const groupHistory = document.querySelector(".group-history")
+
+const openHistory = document.querySelector("#openHistory");
+openHistory.addEventListener("click", function() {
+    groupHistory.style.display = "flex";
+})
+
+const closeHistory = document.querySelector("#closeHistory");
+    closeHistory.addEventListener("click", function() {
+        groupHistory.style.display = "none";
+})
+
+
 /**************************       FOOTER     *****************************/
 
 // Survol des liens vers les réseaux sociaux
