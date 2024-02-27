@@ -74,12 +74,14 @@ body {
 
 .dropdown-menu {
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 0px;
+    border: 1px solid var(--primaryColor);
+    border-radius: 20px;
 }
 
 .has-dropdown-menu:hover .dropdown-menu {
@@ -116,6 +118,7 @@ body {
 
 .navbar_link-items_dropdown-menu {
     display: flex;
+    align-items: center;
     font-size: 0.8em;
 }
 
@@ -325,12 +328,24 @@ main h2 {
     box-shadow: 3px 3px 5px var(--tertiaryColor);
 }
 
+.members-cards-content-1 {
+    display: none;
+}
+
+.members-cards-content-2 {
+    display: none;
+}
+
+.members-cards-content-3 {
+    display: none;
+}
+
 .members-cards-footer{
     display: flex;
     justify-content: flex-end;
 }
 
-.concerts
+.concerts   
 {
     display: flex;
     flex-direction: column;
