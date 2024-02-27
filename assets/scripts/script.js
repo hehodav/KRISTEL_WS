@@ -3,39 +3,85 @@
 **************************************************************************/
 
 
-// Sélectionne l'élément de la barre de navigation
+// Selecting navbar DOM elements
 const navbar = document.querySelector(".navbar"); 
 const dropdownMenu = document.querySelector(".dropdown-menu"); 
 
-// Ajoute un écouteur d'événement pour le défilement de la page 
-window.addEventListener("scroll", function() { 
-    // Vérifie si l'utilisateur a défilé vers le haut 
-    if(window.scrollY <= 100) {
-        navbar.style.display = "flex";
-        navbar.style.backgroundColor = "";
-        dropdownMenu.style.backgroundColor = "";
-    } else if(window.scrollY > 100 && window.scrollY <= 700 )  { 
-        // Affiche la barre de navigation 
-        // navbar.style.backgroundColor = "var(--secondaryColor)"; 
-        // navbar.style.opacity = 0.7; 
-        // dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
-        // dropdownMenu.style.opacity = 0.7;   
-        navbar.style.display = "none";
-    } 
-    else if(window.scrollY > 700)  { 
-        // Affiche la barre de navigation
-        navbar.style.display = "flex";
-        navbar.style.backgroundColor = "var(--secondaryColor)"; 
-        navbar.style.opacity = 1;   
-        dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
-        dropdownMenu.style.opacity = 1;  
-    } 
-    else { 
-        // Cache la barre de navigation 
-        navbar.style.backgroundColor = "";
-        dropdownMenu.style.backgroundColor = "";
-     } 
-}); 
+
+/**********************      Script NavBar V1     ************************/
+// // Ajoute un écouteur d'événement pour le défilement de la page 
+// window.addEventListener("scroll", function() { 
+//     // Vérifie si l'utilisateur a défilé vers le haut 
+//     if(window.scrollY <= 100) {
+//         navbar.style.display = "flex";
+//         navbar.style.backgroundColor = "";
+//         dropdownMenu.style.backgroundColor = "";
+//     } else if(window.scrollY > 100 && window.scrollY <= 700 )  { 
+//         // Affiche la barre de navigation 
+//         // navbar.style.backgroundColor = "var(--secondaryColor)"; 
+//         // navbar.style.opacity = 0.7; 
+//         // dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+//         // dropdownMenu.style.opacity = 0.7;   
+//         navbar.style.display = "none";
+//     } 
+//     else if(window.scrollY > 700)  { 
+//         // Affiche la barre de navigation
+//         navbar.style.display = "flex";
+//         navbar.style.backgroundColor = "var(--secondaryColor)"; 
+//         navbar.style.opacity = 1;   
+//         dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+//         dropdownMenu.style.opacity = 1;  
+//     } 
+//     else { 
+//         // Cache la barre de navigation 
+//         navbar.style.backgroundColor = "";
+//         dropdownMenu.style.backgroundColor = "";
+//      } 
+// }); 
+/*************************************************************************/
+
+
+/**********************      Script NavBar V2     ************************/
+let lastScrollPos = 0;
+
+window.addEventListener("scroll", function() {
+  const currentScrollPos = window.scrollY;
+//   console.log(currentScrollPos);
+
+  // If user is scrolling down, hide the navbar
+  if  (currentScrollPos <= 0) {
+    navbar.classList.remove("navbar_hide");
+  } else {
+  if (currentScrollPos > lastScrollPos) {
+    navbar.classList.add("navbar_hide");
+  } else {
+    // If user is scrolling up, show the navbar
+        if(window.scrollY <= 150) {
+            navbar.classList.remove("navbar_hide");
+            navbar.style.backgroundColor = "";
+            dropdownMenu.style.backgroundColor = "";
+        }
+        if (window.scrollY > 150 && window.scrollY <= 700 )  {
+            navbar.classList.remove("navbar_hide");
+            navbar.style.backgroundColor = "var(--secondaryColor)"; 
+            navbar.style.opacity = 0.7; 
+            dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+            dropdownMenu.style.opacity = 0.7;   
+        }
+        if(window.scrollY > 700)  {
+            navbar.classList.remove("navbar_hide");
+            navbar.style.backgroundColor = "var(--secondaryColor)"; 
+            navbar.style.opacity = 1; 
+            dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+            dropdownMenu.style.opacity = 1; 
+        }
+    }
+  }
+
+  lastScrollPos = currentScrollPos;
+});
+/*************************************************************************/
+
 
 
 /*************************************************************************
@@ -151,13 +197,6 @@ const closeMembersCardsContent3 = document.querySelector("#close-members-cards-c
 closeMembersCardsContent3.addEventListener("click", function() {
     membersCardsContent3.style.display = "none";
 });
-
-
-
-
-
-
-
 
 
 /**************************       FOOTER     *****************************/
