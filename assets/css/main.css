@@ -155,7 +155,6 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    background-position: top -50px;
     height: 100vh;
     transition: all 2000ms ease; 
 }
@@ -374,7 +373,7 @@ main h2 {
     justify-content: center;
     align-items: center;
     background-color: var(--tertiaryColor);
-    color: var(--pimar);
+    color: var(--primaryColor);
     padding: 40px 0;
 }
 
@@ -531,7 +530,6 @@ footer {
     header {
         background-position: top 0 left -110px;
         height: 100vh;
-        width: 100wh;
         transition: all 2000ms ease; 
     }
 
@@ -570,6 +568,11 @@ footer {
 /* HEADER */
     .icones {
         margin-right: 10px;
+        transition: all 1000ms ease; 
+    }
+
+    .bottomHeader {
+        margin-right: 5px;
         transition: all 1000ms ease; 
     }
 
