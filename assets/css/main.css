@@ -230,6 +230,7 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
+    padding: 7px 0 !important;
 }
 
 .has-dropdown-menu-mobile button {

@@ -136,7 +136,7 @@ menuBurger.addEventListener ("click", function() {
         setTimeout(function() {
             navbarMobileMenu.style.transition = "all 1000ms ease";
             navbarMobileMenu.style.left = "0px";
-            menuBurger.style.background = "url(../../assets/ico/icons8-effacer-64_red.webp)";
+            menuBurger.style.background = "url(./assets/ico/icons8-effacer-64_red.webp)";
             menuBurger.style.height = "45px";
             menuBurger.style.width = "45px";
             menuBurger.style.backgroundSize = "cover";
@@ -146,12 +146,27 @@ menuBurger.addEventListener ("click", function() {
     }
 });
 
-window.addEventListener("click", function() {
-    const navbarMobileMenu = document.querySelector(".navbar-mobile_menu");
-    if (navbarMobileMenu.style.left === "0px") {
+window.addEventListener("click", function(event) {
+    const menuBurger = document.querySelector(".burger-menu");
+    const dropdownMenuMobile = document.querySelector(".dropdown-menu-mobile");
+    const btnOpenCloseMenuGaleries = document.querySelector("#btnOpenCloseMenuGaleries");
+    const navbarMobileMenu = document.querySelector(".navbar-mobile_menu"); 
+    const burgerMenuContainer = document.querySelector(".burger-menu-container");
+    const navbarMobileLinkList = this.document.querySelector(".navbar-mobile_link-list")
+    console.log(navbarMobileLinkList)
+    console.log(event.target.parentNode)
+    console.log(event.target.parentNode.parentNode)
+  
+    if (    ((event.target.parentNode !== navbarMobileLinkList) && 
+            (event.target.parentNode.parentNode !== navbarMobileLinkList) &&
+            (event.target.parentNode.parentNode.parentNode !== navbarMobileLinkList) &&
+            (event.target.parentNode.parentNode.parentNode.parentNode.parentNode !== navbarMobileLinkList)) 
+            && (navbarMobileMenu.style.left === "0px")
+        ) 
+    {
         navbarMobileMenu.style.transition = "all 1000ms ease"; 
         navbarMobileMenu.style.left = "400px";
-        menuBurger.style.background = "url(../../assets/ico/icons8-menu-60_black.webp)";
+        menuBurger.style.background = "url(./assets/ico/icons8-menu-60_black.webp)";
         menuBurger.style.height = "45px";
         menuBurger.style.width = "45px";
         menuBurger.style.backgroundSize = "cover";
