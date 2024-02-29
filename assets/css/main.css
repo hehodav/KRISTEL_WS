@@ -50,17 +50,21 @@ body {
 /*************************************************************************
 *                            NAVBAR                                      *
 **************************************************************************/
-
+.navbar-container {
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index: 1;
+    transition: all 3000ms ease; 
+}
 
 .navbar {
     display:flex ; 
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: 1;
-    width:100%;
     transition: all 3000ms ease; 
 }
 
@@ -68,6 +72,7 @@ body {
     top: -200px;
     transition: all 3000ms ease; 
 }
+
 
 .navbar img {
     width: 200px;
@@ -141,6 +146,118 @@ body {
     width: auto;
 }
 
+
+/* -------------------- Mobile Nav Bar -------------------- */
+
+.navbar_link-group {
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--secondaryColor); */
+    /* border: 2px solid var(--tertiaryColor); */
+    box-shadow: 1px 1px 4px var(--tertiaryColor);
+    border-radius: 10px;
+    margin-right: 40px;
+    transition: all 1000ms ease; 
+}
+
+.burger-menu {
+    background: url(../ico/icons8-menu-60_black.webp);
+    background-size: cover;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+    border: none;
+    margin: 0 5px;
+}
+
+.navbar-mobile_menu {
+    display: none;
+    align-self: end;
+    padding-right: 30px;
+    position: relative;
+    top: 10px;
+    left: 400px;
+    transition: all 1000ms ease; 
+}
+
+.navbar-mobile_menu_hide {
+    top: -500px;
+    transition: all 3000ms ease; 
+}
+
+.navbar-mobile_menu hr {
+    padding: 0;
+}
+
+.navbar-mobile_link-list {
+    background-color: var(--secondaryColor);
+    border: 2px solid var(--primaryColor);
+    border-radius: 20px;
+    padding: 0 20px;
+    list-style-type: none;
+    transition: all 1000ms ease; 
+    
+}
+
+.navbar-mobile_link-items {
+    font-family: var(--primaryFontFamily);
+    font-weight: var(--primaryFontWeight);
+    font-style: var(--primaryFontstyle);
+    text-transform: uppercase;
+    font-size: 1.7em;
+    padding: 20px 0;
+    transition: all 1000ms ease; 
+}
+
+.navbar-mobile_link-items a {
+    color: var(--tertiaryColor);
+    text-decoration: none;
+    transition: all 1000ms ease; 
+}
+
+.navbar-mobile_link-items a:hover {
+    color: var(--primaryColor);
+    transition: all 1000ms ease; 
+}
+
+.has-dropdown-menu-mobile {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.has-dropdown-menu-mobile button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.has-dropdown-menu-mobile img {
+    transform:rotate(90deg);
+    align-self:flex-start;
+    transition: all 1000ms ease; 
+}
+
+.navbar-mobile_link-items-galeries {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.dropdown-menu-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    list-style-type: none;
+}
+
 /*************************************************************************
 *                          HOME PAGE                                     *
 **************************************************************************/
@@ -150,7 +267,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-image: url("../img/Kristel-173-07-0084.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -265,6 +382,7 @@ main h2 {
     width: auto;
     margin-bottom: 50px;
     transition: all 1000ms ease; 
+    cursor: pointer;
 }
 
 .group-history {
@@ -274,7 +392,7 @@ main h2 {
     padding: 0 30px 20px 0; 
     box-shadow: 3px 3px 5px var(--tertiaryColor);
     margin-bottom: 50px;
-    transition: all 10000ms ease; 
+    transition: all 1000ms ease; 
 }
 
 .group img:hover {
@@ -565,16 +683,30 @@ footer {
 
 /************************ BREAK POINT 1200px *****************************/
 @media screen and (max-width: 1200px) {
-/* HEADER */
-    .icones {
-        margin-right: 10px;
-        transition: all 1000ms ease; 
+/* NAV BAR MOBILE */
+    .burger-menu-container {
+        display: block;
     }
 
-    .bottomHeader {
-        margin-right: 5px;
-        transition: all 1000ms ease; 
+    .navbar_link-list {
+        display: none;
     }
+
+/* HEADER */
+    header {
+        background-position: top 0 left -150px;
+        height: 100vh;
+        transition: all 2000ms ease; 
+    }
+        .icones {
+            margin-right: 10px;
+            transition: all 1000ms ease; 
+        }
+
+        .bottomHeader {
+            margin-right: 5px;
+            transition: all 1000ms ease; 
+        }
 
 }
 
