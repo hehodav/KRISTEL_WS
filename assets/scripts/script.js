@@ -120,7 +120,7 @@ menuBurger.addEventListener ("click", function() {
     if (navbarMobileMenu.style.left === "0px") {
         navbarMobileMenu.style.transition = "all 1000ms ease"; 
         navbarMobileMenu.style.left = "400px";
-        menuBurger.style.background = "url(../../assets/ico/icons8-menu-60_black.webp)";
+        menuBurger.style.background = "url(./assets/ico/icons8-menu-60_black.webp)";
         menuBurger.style.height = "45px";
         menuBurger.style.width = "45px";
         menuBurger.style.backgroundSize = "cover";
