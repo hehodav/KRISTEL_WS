@@ -259,10 +259,10 @@ body {
     list-style-type: none;
 }
 
+
 /*************************************************************************
 *                          HOME PAGE                                     *
 **************************************************************************/
-
 
 /**************************       HEADER     *****************************/
 header {
@@ -389,7 +389,7 @@ main h2 {
 .group-history {
     display: none;
     flex-direction: column;
-    width: 50%;
+    width: 75%;
     padding: 0 30px 20px 0; 
     box-shadow: 3px 3px 5px var(--tertiaryColor);
     margin-bottom: 50px;
@@ -424,6 +424,7 @@ main h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
     width: 100%;
     transition: all 1000ms ease; 
 }
@@ -433,13 +434,15 @@ main h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    /* width: 400px; */
+    width: 30%;
     transition: all 1000ms ease; 
 }
 
 .members-cards > img {
-    height: 300px;
-    width: auto;
+    /* height: 300px;
+    width: auto; */
+    width: 90%;
     border-radius: 50%;
     box-shadow: 3px 3px 5px var(--tertiaryColor);
 }
@@ -545,7 +548,6 @@ footer {
 }
 
 
-
 /*************************************************************************
 *                            MEDIA QUERIES                               *
 **************************************************************************/
@@ -564,6 +566,11 @@ footer {
     }
 
 /* HEADER */
+    header {
+        background-position: center;
+        transition: all 2000ms ease; 
+    }
+    
     .icones {
         margin-left: 140px;
     }
@@ -579,11 +586,12 @@ footer {
     }
 }
 
+
 /************************ BREAK POINT 1375px *****************************/
 @media screen and (max-width: 1375px) {
 /* HEADER */
     .icones {
-        margin-left: 170px;
+        margin-left: 150px;
         margin-bottom: 160px;
         transition: all 1000ms ease; 
     }
@@ -610,11 +618,12 @@ footer {
     }
 }
 
+
 /************************ BREAK POINT 1325px *****************************/
 @media screen and (max-width: 1325px) {
 /* HEADER */
     .icones {
-        margin-left: 200px;
+        margin-left: 140px;
         margin-bottom: 200px;
         transition: all 1000ms ease; 
     }
@@ -642,18 +651,11 @@ footer {
 }
 
 
-
 /************************ BREAK POINT 1275px *****************************/
 @media screen and (max-width: 1275px) {
 /* HEADER */
-    header {
-        background-position: top 0 left -110px;
-        height: 100vh;
-        transition: all 2000ms ease; 
-    }
-
     .icones {
-        margin-left: 55px;
+        margin-left: 100px;
         margin-right: 30px;
         transition: all 1000ms ease; 
     }
@@ -682,6 +684,7 @@ footer {
     }
 }
 
+
 /************************ BREAK POINT 1200px *****************************/
 @media screen and (max-width: 1200px) {
 /* NAV BAR MOBILE */
@@ -694,49 +697,107 @@ footer {
     }
 
 /* HEADER */
-    header {
-        background-position: top 0 left -150px;
-        height: 100vh;
-        transition: all 2000ms ease; 
+    .icones {
+        margin-right: 10px;
+        transition: all 1000ms ease; 
     }
-        .icones {
-            margin-right: 10px;
-            transition: all 1000ms ease; 
-        }
 
-        .bottomHeader {
-            margin-right: 5px;
-            transition: all 1000ms ease; 
-        }
+    .bottomHeader {
+        margin-right: 5px;
+        transition: all 1000ms ease; 
+    }
 
 }
 
 
-
-
-
-
-
-
-/************************ BREAK POINT 500px *****************************/
-@media screen and (max-width: 500px) {
+/************************ BREAK POINT 1150px *****************************/
+@media screen and (max-width: 1150px) {  
 /* HEADER */
-    header {
-        background-size: 200%;
-        background-position: top 0 left -240px;
-        height: 100vh;
-        /* width: 100%; */
-        transition: all 2000ms ease; 
+    .icones {
+        margin-right: 0;
+        margin-left: 70px;
+        margin-bottom: 250px;
+        transition: all 1000ms ease; 
     }
 
+    .icones img {
+        height: 175px;
+        transition: all 5000ms ease; 
+    }
+}
+
+
+/************************ BREAK POINT 1100px *****************************/
+@media screen and (max-width: 1100px) {
+/* HEADER */
+    .icones {
+        margin-bottom: 300px;
+        margin-left: 90px;
+        transition: all 1000ms ease; 
+    }
+
+    .icones img {
+        height: 125px;
+        transition: all 5000ms ease; 
+    }
+}
+
+
+/************************ BREAK POINT 1050px *****************************/
+@media screen and (max-width: 1050px) {
+/* HEADER */
+    .icones img {
+        height: 100px;
+        transition: all 5000ms ease; 
+    }
+}
+
+
+/************************ BREAK POINT 1000px *****************************/
+@media screen and (max-width: 1000px) {
+/* HEADER */
+    header {
+        background-image: url("../img/Kristel-173-07-0084-crop.png");
+        transition: all 2000ms ease; 
+    } 
+
+    .icones img {
+        opacity: 0 !important;
+        transform: scale(0) !important;
+        transition: all 5000ms ease; 
+    }
+}
+
+
+/************************ BREAK POINT 700px *****************************/
+@media screen and (max-width: 900px) {
 /* MAIN */
     .members {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         transition: all 1000ms ease; 
+    }
+}
+
+
+/************************ BREAK POINT 500px *****************************/
+@media screen and (max-width: 500px) {
+/* HEADER */
+    .bottomHeader {
+        display:flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+        align-items: center;
+        margin: 20px 40px;  
+        transition: all 1000ms ease;  
+    }
+
+    .bottomHeader_socialNetwork {
+        gap: 25px;
+        transition: all 2000ms ease; 
     }
 
 /* FOOTER */
