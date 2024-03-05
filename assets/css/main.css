@@ -366,6 +366,11 @@ main h2 {
     margin-top: 20px;
 }
 
+
+
+
+/**************************       MAIN - GROUP SECTION      *****************************/
+
 .group, .news
 {
     display: flex;
@@ -501,6 +506,94 @@ main h2 {
     color: var(--primaryColor);
     padding: 40px 0;
 }
+
+
+/**************************       MAIN - CONCERTS SECTION      *****************************/
+.concerts {
+    display: flex;
+    flex-direction: column;
+}
+
+.concerts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 30px 0;
+}
+
+.concert-card-container {
+    display: flex;
+    width: 100%;
+}
+
+.concert-card-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 20%;
+    padding: 50px 10px;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    font-size: 1.5em;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 5px 5px 5px rgba(11,10,11, 0.5)
+}
+
+
+
+.concert-card-localisation {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    width: 60%;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 2em;
+    box-shadow: 5px 5px 5px rgba(11,10,11, 0.5)
+}
+
+.concert-card-links {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-left: 3px dashed var(--primaryColor);
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 5px 5px 5px rgba(11,10,11, 0.5);
+    padding: 10px;
+}
+
+.concert-card-links a {
+    display: flex;
+    justify-content: center;
+}
+
+.concert-card-links a img {
+    width: 35%;
+    height: auto;
+} 
+
+.bottom-concerts-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bottom-concerts-section img {
+    height: 70px;
+    width: auto;
+    margin-right: 30px;
+}
+
 
 
 /*************************************************************************
