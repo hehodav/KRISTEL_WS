@@ -187,42 +187,6 @@ window.addEventListener("click", function(event) {
     }
 });
 
-// Disparition du menu au touch sur écran tactile ailleurs que dans le menu //
-window.addEventListener("touch", function(event) {
-    const menuBurger = document.querySelector(".burger-menu");
-    const dropdownMenuMobile = document.querySelector(".dropdown-menu-mobile");
-    const btnOpenCloseMenuGaleries = document.querySelector("#btnOpenCloseMenuGaleries");
-    const navbarMobileMenu = document.querySelector(".navbar-mobile_menu"); 
-    const burgerMenuContainer = document.querySelector(".burger-menu-container");
-    const navbarMobileLinkList = document.querySelector(".navbar-mobile_link-list")
-    // console.log(navbarMobileLinkList)
-    // console.log(event.target.parentNode)
-    // console.log(event.target.parentNode.parentNode)
-  
-    if (    ((event.target.parentNode !== navbarMobileLinkList) && 
-            (event.target.parentNode.parentNode !== navbarMobileLinkList) &&
-            (event.target.parentNode.parentNode.parentNode !== navbarMobileLinkList) &&
-            (event.target.parentNode.parentNode.parentNode.parentNode !== navbarMobileLinkList) &&
-            (event.target.parentNode.parentNode.parentNode.parentNode.parentNode !== navbarMobileLinkList)) 
-            && (navbarMobileMenu.style.left === "0px")
-        ) 
-    {
-        navbarMobileMenu.style.transition = "all 1000ms ease"; 
-        navbarMobileMenu.style.left = "400px";
-        menuBurger.style.background = "url(./assets/ico/icons8-menu-60_black.webp)";
-        menuBurger.style.height = "45px";
-        menuBurger.style.width = "45px";
-        menuBurger.style.backgroundSize = "cover";
-        menuBurger.backgroundPosition = "center";
-        burgerMenuContainer.style.boxShadow = "1px 1px 4px var(--tertiaryColor)";
-        dropdownMenuMobile.style.display = "none";
-        btnOpenCloseMenuGaleries.style.transform = "rotate(90deg)";
-        setTimeout(function() {
-            navbarMobileMenu.style.display = "none";
-        }, "1000");
-    }
-});
-
 /**********************       Dropdown Menu        **********************/
 const btnOpenCloseMenuGaleries = document.querySelector("#btnOpenCloseMenuGaleries");
 

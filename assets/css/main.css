@@ -570,7 +570,7 @@ footer {
 
 /* HEADER */
     header {
-        background-position: top0 center;
+        background-position: top center;
         transition: all 2000ms ease; 
     }
     
