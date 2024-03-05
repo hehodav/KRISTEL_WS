@@ -57,46 +57,49 @@ window.addEventListener("scroll", function() {
     const dropdownMenu = document.querySelector(".dropdown-menu"); 
     const navbarMobileMenu = document.querySelector(".navbar-mobile_menu"); 
 
-  const currentScrollPos = window.scrollY;
-//   console.log(currentScrollPos);
-
-  // If user is scrolling down, hide the navbar
-  if  (currentScrollPos <= 0) {
-    navbarContainer.classList.remove("navbar_hide");
-    navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
-  } else {
-  if (currentScrollPos > lastScrollPos) {
-    navbarContainer.classList.add("navbar_hide");
-    navbarMobileMenu.classList.add("navbar-mobile_menu_hide");
-  } else {
-    // If user is scrolling up, show the navbar
-        if(window.scrollY <= 150) {
-            navbarContainer.classList.remove("navbar_hide");
-            navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
-            navbar.style.backgroundColor = "";
-            dropdownMenu.style.backgroundColor = "";
-        }
-        if (window.scrollY > 150 && window.scrollY <= 700 )  {
-            navbarContainer.classList.remove("navbar_hide");
-            navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
-            navbar.style.backgroundColor = "var(--secondaryColor)"; 
-            navbar.style.opacity = 0.7; 
-            dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
-            dropdownMenu.style.opacity = 0.7;   
-        }
-        if(window.scrollY > 700)  {
-            navbarContainer.classList.remove("navbar_hide");
-            navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
-            navbar.style.backgroundColor = "var(--secondaryColor)"; 
-            navbar.style.opacity = 1; 
-            dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
-            dropdownMenu.style.opacity = 1; 
+    const currentScrollPos = window.scrollY;
+    // console.log(currentScrollPos);
+    
+    // If user is scrolling down, hide the navbar
+    if  (currentScrollPos <= 0) {
+        navbarContainer.classList.remove("navbar_hide");
+        navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
+    } else {
+        if (currentScrollPos > lastScrollPos) {
+            navbarContainer.classList.add("navbar_hide");
+            navbarMobileMenu.classList.add("navbar-mobile_menu_hide");
+        } else {
+            // If user is scrolling up, show the navbar
+            if(window.scrollY <= 150) {
+                navbarContainer.classList.remove("navbar_hide");
+                navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
+                navbar.style.backgroundColor = "";
+                dropdownMenu.style.backgroundColor = "";
+            }
+            if (window.scrollY > 150 && window.scrollY <= 700 )  {
+                navbarContainer.classList.remove("navbar_hide");
+                navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
+                navbar.style.backgroundColor = "var(--secondaryColor)"; 
+                navbar.style.opacity = 0.7; 
+                dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+                dropdownMenu.style.opacity = 0.7;   
+            }
+            if(window.scrollY > 700)  {
+                navbarContainer.classList.remove("navbar_hide");
+                navbarMobileMenu.classList.remove("navbar-mobile_menu_hide");
+                navbar.style.backgroundColor = "var(--secondaryColor)"; 
+                navbar.style.opacity = 1; 
+                dropdownMenu.style.backgroundColor = "var(--secondaryColor)"; 
+                dropdownMenu.style.opacity = 1; 
+            }
         }
     }
-  }
 
-  lastScrollPos = currentScrollPos;
+
+    lastScrollPos = currentScrollPos;
 });
+
+
 
 /*************************************************************************/
 
@@ -153,13 +156,14 @@ window.addEventListener("click", function(event) {
     const navbarMobileMenu = document.querySelector(".navbar-mobile_menu"); 
     const burgerMenuContainer = document.querySelector(".burger-menu-container");
     const navbarMobileLinkList = this.document.querySelector(".navbar-mobile_link-list")
-    console.log(navbarMobileLinkList)
-    console.log(event.target.parentNode)
-    console.log(event.target.parentNode.parentNode)
+    // console.log(navbarMobileLinkList)
+    // console.log(event.target.parentNode)
+    // console.log(event.target.parentNode.parentNode)
   
     if (    ((event.target.parentNode !== navbarMobileLinkList) && 
             (event.target.parentNode.parentNode !== navbarMobileLinkList) &&
             (event.target.parentNode.parentNode.parentNode !== navbarMobileLinkList) &&
+            (event.target.parentNode.parentNode.parentNode.parentNode !== navbarMobileLinkList) &&
             (event.target.parentNode.parentNode.parentNode.parentNode.parentNode !== navbarMobileLinkList)) 
             && (navbarMobileMenu.style.left === "0px")
         ) 

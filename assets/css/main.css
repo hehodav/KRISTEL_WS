@@ -58,6 +58,7 @@ body {
     top:0;
     left:0;
     z-index: 1;
+    transform: scale(1);
     transition: all 3000ms ease; 
 }
 
@@ -181,8 +182,9 @@ body {
     align-self: end;
     padding-right: 30px;
     position: relative;
-    top: 10px;
+    top: 5px;
     left: 400px;
+    transform: scale(1);
     transition: all 1000ms ease; 
 }
 
@@ -201,6 +203,7 @@ body {
     border-radius: 20px;
     padding: 0 20px;
     list-style-type: none;
+    transform: scale(1);
     transition: all 1000ms ease; 
     
 }
@@ -210,7 +213,7 @@ body {
     font-weight: var(--primaryFontWeight);
     font-style: var(--primaryFontstyle);
     text-transform: uppercase;
-    font-size: 1.7em;
+    font-size: 1.5em;
     padding: 20px 0;
     transition: all 1000ms ease; 
 }
@@ -552,7 +555,7 @@ footer {
 *                            MEDIA QUERIES                               *
 **************************************************************************/
 
-/************************ BREAK POINT 1450px *****************************/
+/************************ BREAK POINT WIDTH 1450px *****************************/
 @media screen and (max-width: 1450px) {
 /* NAVBAR */
     .navbar_link-items {
@@ -567,7 +570,7 @@ footer {
 
 /* HEADER */
     header {
-        background-position: center;
+        background-position: top0 center;
         transition: all 2000ms ease; 
     }
     
@@ -587,7 +590,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1375px *****************************/
+/************************ BREAK POINT WIDTH 1375px *****************************/
 @media screen and (max-width: 1375px) {
 /* HEADER */
     .icones {
@@ -619,7 +622,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1325px *****************************/
+/************************ BREAK POINT WIDTH 1325px *****************************/
 @media screen and (max-width: 1325px) {
 /* HEADER */
     .icones {
@@ -651,7 +654,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1275px *****************************/
+/************************ BREAK POINT WIDTH 1275px *****************************/
 @media screen and (max-width: 1275px) {
 /* HEADER */
     .icones {
@@ -685,7 +688,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1200px *****************************/
+/************************ BREAK POINT WIDTH 1200px *****************************/
 @media screen and (max-width: 1200px) {
 /* NAV BAR MOBILE */
     .burger-menu-container {
@@ -710,7 +713,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1150px *****************************/
+/************************ BREAK POINT WIDTH 1150px *****************************/
 @media screen and (max-width: 1150px) {  
 /* HEADER */
     .icones {
@@ -727,7 +730,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1100px *****************************/
+/************************ BREAK POINT  WIDTH 1100px *****************************/
 @media screen and (max-width: 1100px) {
 /* HEADER */
     .icones {
@@ -743,7 +746,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1050px *****************************/
+/************************ BREAK POINT WIDTH 1050px *****************************/
 @media screen and (max-width: 1050px) {
 /* HEADER */
     .icones img {
@@ -753,7 +756,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 1000px *****************************/
+/************************ BREAK POINT WIDTH 1000px *****************************/
 @media screen and (max-width: 1000px) {
 /* HEADER */
     header {
@@ -769,7 +772,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 700px *****************************/
+/************************ BREAK POINT WIDTH 700px *****************************/
 @media screen and (max-width: 900px) {
 /* MAIN */
     .members {
@@ -783,7 +786,7 @@ footer {
 }
 
 
-/************************ BREAK POINT 500px *****************************/
+/************************ BREAK POINT WIDTH 500px *****************************/
 @media screen and (max-width: 500px) {
 /* HEADER */
     .bottomHeader {
@@ -812,3 +815,32 @@ footer {
     }
 }
 
+/************************ BREAK POINTS HEIGHT  *****************************/
+@media screen and (max-height: 650px) {
+    .navbar-mobile_menu {
+        transform: scale(0.9);
+        transform-origin: top right;
+        transition: all 1000ms ease; 
+    }
+}
+
+@media screen and (max-height: 575px) {
+    .navbar-mobile_menu {
+        transform: scale(0.8);
+        transition: all 1000ms ease; 
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .navbar-mobile_menu {
+        transform: scale(0.7);
+        transition: all 1000ms ease; 
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .navbar-mobile_menu {
+        transform: scale(0.6);
+        transition: all 1000ms ease; 
+    }
+}
