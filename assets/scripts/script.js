@@ -272,7 +272,6 @@ logoSpotifyHeader.addEventListener("mouseout", function() {
 
 /**************************        MAIN      *****************************/
 
-
 /***************        Open / Close - Group Details     *****************/
 const groupHistory = document.querySelector(".group-history");
 
@@ -285,6 +284,7 @@ const closeHistory = document.querySelector("#closeHistory");
 closeHistory.addEventListener("click", function() {
         groupHistory.style.display = "none";
 });
+
 
 /***************        Open / Close - Members 1 Details     *****************/
 const membersCardsContent1 = document.querySelector(".members-cards-content-1");
@@ -324,6 +324,133 @@ const closeMembersCardsContent3 = document.querySelector("#close-members-cards-c
 closeMembersCardsContent3.addEventListener("click", function() {
     membersCardsContent3.style.display = "none";
 });
+
+
+
+/**************************        MAIN - CONCERTS - CAROUSSEL     *****************************/
+
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+  // Hide all slides
+  const slides = document.querySelectorAll(".concert-card-container");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+    document.querySelectorAll(".marker")[i].classList.remove('active');
+  }
+
+  // Show the selected slide and update the marker
+  slides[slideIndex].style.display = 'flex';
+  slides[slideIndex].classList.add('active');
+  document.querySelectorAll(".marker")[slideIndex].classList.add('active');
+
+  currentSlide = slideIndex;
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll(".concert-card-container")
+    showSlide((currentSlide + 1) % slides.length);
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll(".concert-card-container")
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+}
+
+document.getElementById('next').addEventListener('click', nextSlide);
+document.getElementById('prev').addEventListener('click', prevSlide);
+
+// Show the initial slide
+showSlide(0);
+
+// setInterval(function() {
+//     nextSlide(0)
+// }, 5000);
+
+
+/**************************        MAIN - NEWS     *****************************/
+
+/**************************       CAROUSEL    *****************************/
+
+
+let newsCurrentSlide = 0;
+const bottomNewsCard = document.querySelectorAll(".bottom-news-card");
+const newsCardContent = document.querySelectorAll(".news-card-content");
+
+function newsShowSlide(newsSlideIndex) {
+    // Hide all slides
+    const newsSlides = document.querySelectorAll(".news-card-container");
+    
+    for (let i = 0; i < newsSlides.length; i++) {
+        newsSlides[i].style.display = 'none';
+        //newsSlides[i].style.width = '0%';
+        document.querySelectorAll(".news-marker")[i].classList.remove('active')
+
+    }
+
+    // Show the selected slide and update the marker
+    newsSlides[newsSlideIndex].style.display = 'flex';
+    //newsSlides[newsSlideIndex].style.width = '60%';
+    newsSlides[newsSlideIndex].classList.add('active');
+    document.querySelectorAll(".news-marker")[newsSlideIndex].classList.add('active');
+
+    newsCurrentSlide = newsSlideIndex;
+
+    // Appartion du bouton Open / Close more text on actu en cours
+    const bottomNewsCard = document.querySelectorAll(".bottom-news-card");
+    const newsCardContent = document.querySelectorAll(".news-card-content");
+    if (newsCardContent[newsSlideIndex].clientHeight >= 576) {
+        bottomNewsCard[newsSlideIndex].style.display = "flex";
+    } else {
+        bottomNewsCard[newsSlideIndex].style.display = "none";
+    }
+
+}
+
+function newsNextSlide() {
+    const newsSlides = document.querySelectorAll(".news-card-container")
+    newsShowSlide((newsCurrentSlide + 1) % newsSlides.length);
+}
+
+function newsPrevSlide() {
+    const newsSlides = document.querySelectorAll(".news-card-container")
+    newsShowSlide((newsCurrentSlide - 1 + newsSlides.length) % newsSlides.length);
+}
+
+document.getElementById('news-next').addEventListener('click', newsNextSlide);
+document.getElementById('news-prev').addEventListener('click', newsPrevSlide);
+
+// Show the initial slide
+newsShowSlide(0);
+
+// setInterval(function() {
+//     newsNextSlide(0)
+// }, 5000);
+
+
+// Appartion du bouton Open / Close more text on actu en cours 
+window.addEventListener("resize", function() {
+    if (newsCardContent[newsCurrentSlide ].clientHeight >= 576) {
+        bottomNewsCard[newsCurrentSlide ].style.display = "flex";
+    } else {
+        bottomNewsCard[newsCurrentSlide ].style.display = "none";
+        }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**************************       FOOTER     *****************************/

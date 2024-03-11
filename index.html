@@ -92,8 +92,6 @@
                 </ul>
             </div>
         </div>
-
-
         <div class="bottomHeader-Container">
             <div class="icones">
                 <img src="./assets//logos/Kristel-Logo_Icon-04_redim_292x475.webp" alt="Icône Kristel">
@@ -128,6 +126,7 @@
     </header>
 
     <main>
+
         <section class="group">
             <h1>Le groupe</h1>
             <img id="openHistory" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
@@ -291,52 +290,382 @@
                 </div>
             </div>
         </section>
+
         <section class="concerts">
             <h1>Dates à retenir</h1>
             <div class="concerts-container">
+
+                <div class="carousel-buttons">
+                    <button id="prev">&#8593;</button>
+                    <button id="next">&#8595;</button>
+                </div>
+
                 <div class="concert-card-container">
                     <div class="concert-card-date">
-                        <p>Jour n°</p>
+                        <p>Jour n°0</p>
                         <p>Mois</p>
                         <p>Année</p>
                     </div>
                     <div class="concert-card-localisation">
-                        <p>Ville (dpt)</p>
-                        <p>Nom de la salle ou du Festival</p>
+                        <p class="concert-card-localisation-city">Ville (dpt)</p>
+                        <p class="concert-card-localisation-hall">Nom de la salle ou du Festival</p>
                     </div>
                     <div class="concert-card-links">
-                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png" alt="lien plus d'infromations"></a>
+                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png"
+                                alt="lien plus d'infromations"></a>
                         <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
-                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png" alt="lien vers billeterie"></a>
+                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png"
+                                alt="lien vers billeterie"></a>
                     </div>
                 </div>
+
+                <div class="concert-card-container">
+                    <div class="concert-card-date">
+                        <p>Jour n°1</p>
+                        <p>Mois</p>
+                        <p>Année</p>
+                    </div>
+                    <div class="concert-card-localisation">
+                        <p class="concert-card-localisation-city">Ville (dpt)</p>
+                        <p class="concert-card-localisation-hall">Nom de la salle ou du Festival</p>
+                    </div>
+                    <div class="concert-card-links">
+                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png"
+                                alt="lien plus d'infromations"></a>
+                        <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
+                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png"
+                                alt="lien vers billeterie"></a>
+                    </div>
+                </div>
+
+                <div class="concert-card-container">
+                    <div class="concert-card-date">
+                        <p>Jour n°2</p>
+                        <p>Mois</p>
+                        <p>Année</p>
+                    </div>
+                    <div class="concert-card-localisation">
+                        <p class="concert-card-localisation-city">Ville (dpt)</p>
+                        <p class="concert-card-localisation-hall">Nom de la salle ou du Festival</p>
+                    </div>
+                    <div class="concert-card-links">
+                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png"
+                                alt="lien plus d'infromations"></a>
+                        <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
+                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png"
+                                alt="lien vers billeterie"></a>
+                    </div>
+                </div>
+
+                <div class="concert-card-container">
+                    <div class="concert-card-date">
+                        <p>Jour n°3</p>
+                        <p>Mois</p>
+                        <p>Année</p>
+                    </div>
+                    <div class="concert-card-localisation">
+                        <p class="concert-card-localisation-city">Ville (dpt)</p>
+                        <p class="concert-card-localisation-hall">Nom de la salle ou du Festival</p>
+                    </div>
+                    <div class="concert-card-links">
+                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png"
+                                alt="lien plus d'infromations"></a>
+                        <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
+                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png"
+                                alt="lien vers billeterie"></a>
+                    </div>
+                </div>
+
+                <div class="concert-card-container">
+                    <div class="concert-card-date">
+                        <p>Jour n°4</p>
+                        <p>Mois</p>
+                        <p>Année</p>
+                    </div>
+                    <div class="concert-card-localisation">
+                        <p class="concert-card-localisation-city">Ville (dpt)</p>
+                        <p class="concert-card-localisation-hall">Nom de la salle ou du Festival</p>
+                    </div>
+                    <div class="concert-card-links">
+                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png"
+                                alt="lien plus d'infromations"></a>
+                        <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
+                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png"
+                                alt="lien vers billeterie"></a>
+                    </div>
+                </div>
+
+
+                <div class="carousel-markers">
+                    <button class="marker" onclick="showSlide(0)"></button>
+                    <button class="marker" onclick="showSlide(1)"></button>
+                    <button class="marker" onclick="showSlide(2)"></button>
+                    <button class="marker" onclick="showSlide(3)"></button>
+                    <button class="marker" onclick="showSlide(4)"></button>
+                </div>
+
             </div>
             <div class="bottom-concerts-section">
-                <a href="" title="lien vers la page Concerts & Évènements"><img src="./assets/ico/oeil_black.png" alt="Icône d'oeil"></a>
+                <a href="" title="lien vers la page Concerts & Évènements"><img src="./assets/ico/oeil_black.png"
+                        alt="Icône d'oeil"></a>
             </div>
         </section>
+
         <section class="news">
             <h1>Actualités</h1>
             <div class="news-container">
+                <div class="news-left-slide">
+                    <button id="news-prev"><</button>
+                </div>
                 <div class="news-card-container">
                     <div class="news-card-title">
-                        <h2>Titre</h2>
-                        <p>Mois</p>
-                        <p>Année</p>
+                        <h2>Titre0</h2>
                     </div>
-                    <div class="concert-card-localisation">
-                        <p>Ville (dpt)</p>
-                        <p>Nom de la salle ou du Festival</p>
-                    </div>
-                    <div class="concert-card-links">
-                        <a href="" title="Plus d'informations ..."><img src="./assets/ico/bouton-dinformation_red.png" alt="lien plus d'infromations"></a>
-                        <img src="./assets/ico/qr-code.png" alt="image d'un QR-Code">
-                        <a href="" title="Accès Billeterie, s'il y a ..."><img src="./assets/ico/billet_red.png" alt="lien vers billeterie"></a>
+                    <div class="news-card">
+                        <div class="news-card-img">
+                            <img src="./assets/img/Not up to it_artwork_Kristel_BD.jpg" alt="Image de l'actualité">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="truncate-overflow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis
+                                exercitationem
+                                unde quisquam, perferendis labore optio error aspernatur iure, excepturi voluptate
+                                tempore
+                                ullam quae itaque voluptates distinctio animi sit rerum eligendi ipsam voluptatum
+                                dolorem
+                                quaerat aliquam. Autem, veniam. Et architecto est facilis omnis explicabo similique
+                                eligendi
+                                adipisci sit vel voluptas neque quae placeat optio laborum, pariatur unde nobis dolores
+                                doloremque beatae officia itaque eum ipsum. Saepe autem amet quam reiciendis. Quo
+                                assumenda
+                                quis molestias nulla rerum doloremque laboriosam harum, totam dolores magni esse
+                                aliquam!
+                                Nisi dolor fugiat est, harum earum aliquid corrupti recusandae incidunt assumenda
+                                placeat
+                                quas ex necessitatibus vitae vero voluptatem quasi! Placeat, facere blanditiis! Sunt
+                                explicabo incidunt officiis delectus libero, distinctio quibusdam aut ab iure accusamus
+                                exercitationem voluptatem. Dolore sapiente corrupti quia repellat maiores ut ullam
+                                consequuntur repellendus aspernatur molestiae asperiores architecto magni, libero quos
+                                ab
+                                pariatur! Quod beatae ex dolores ipsam nulla nostrum nihil totam perferendis eum
+                                corporis!
+                                Rerum expedita soluta sequi dicta consectetur similique, esse sapiente iusto sit,
+                                officia
+                                suscipit temporibus aspernatur aut porro delectus, non quo. Molestiae ex vel,
+                                perferendis
+                                accusamus id recusandae tempore eum odio voluptatibus incidunt. Impedit inventore quasi
+                                voluptate cupiditate expedita? Accusamus impedit possimus ipsam necessitatibus optio,
+                                harum
+                                pariatur est ullam. Doloremque.
+                            </p>
+                            <div class="bottom-news-card">
+                                <img id="open-news-card" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="news-card-container">
+                    <div class="news-card-title">
+                        <h2>Titre1</h2>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img">
+                            <img src="./assets/img/Not up to it_artwork_Kristel_BD.jpg" alt="Image de l'actualité">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="truncate-overflow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis
+                                exercitationem
+                                unde quisquam, perferendis labore optio error aspernatur iure, excepturi voluptate
+                                tempore
+                                ullam quae itaque voluptates distinctio animi sit rerum eligendi ipsam voluptatum
+                                dolorem
+                                quaerat aliquam. Autem, veniam. Et architecto est facilis omnis explicabo similique
+                                eligendi
+                                adipisci sit vel voluptas neque quae placeat optio laborum, pariatur unde nobis dolores
+                                doloremque beatae officia itaque eum ipsum. Saepe autem amet quam reiciendis. Quo
+                                assumenda
+                                quis molestias nulla rerum doloremque laboriosam harum, totam dolores magni esse
+                                aliquam!
+                                Nisi dolor fugiat est, harum earum aliquid corrupti recusandae incidunt assumenda
+                                placeat
+                                quas ex necessitatibus vitae vero voluptatem quasi! Placeat, facere blanditiis! Sunt
+                                explicabo incidunt officiis delectus libero, distinctio quibusdam aut ab iure accusamus
+                                exercitationem voluptatem. Dolore sapiente corrupti quia repellat maiores ut ullam
+                                consequuntur repellendus aspernatur molestiae asperiores architecto magni, libero quos
+                                ab
+                                pariatur! Quod beatae ex dolores ipsam nulla nostrum nihil totam perferendis eum
+                                corporis!
+                                Rerum expedita soluta sequi dicta consectetur similique, esse sapiente iusto sit,
+                                officia
+                                suscipit temporibus aspernatur aut porro delectus, non quo. Molestiae ex vel,
+                                perferendis
+                                accusamus id recusandae tempore eum odio voluptatibus incidunt. Impedit inventore quasi
+                                voluptate cupiditate expedita? Accusamus impedit possimus ipsam necessitatibus optio,
+                                harum
+                                pariatur est ullam. Doloremque.
+                            </p>
+                            <div class="bottom-news-card">
+                                <img id="open-news-card" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card-container">
+                    <div class="news-card-title">
+                        <h2>Titre2</h2>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img">
+                            <img src="./assets/img/Not up to it_artwork_Kristel_BD.jpg" alt="Image de l'actualité">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="truncate-overflow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis
+                                exercitationem
+                                unde quisquam, perferendis labore optio error aspernatur iure, excepturi voluptate
+                                tempore
+                                ullam quae itaque voluptates distinctio animi sit rerum eligendi ipsam voluptatum
+                                dolorem
+                                quaerat aliquam. Autem, veniam. Et architecto est facilis omnis explicabo similique
+                                eligendi
+                                adipisci sit vel voluptas neque quae placeat optio laborum, pariatur unde nobis dolores
+                                doloremque beatae officia itaque eum ipsum. Saepe autem amet quam reiciendis. Quo
+                                assumenda
+                                quis molestias nulla rerum doloremque laboriosam harum, totam dolores magni esse
+                                aliquam!
+                                Nisi dolor fugiat est, harum earum aliquid corrupti recusandae incidunt assumenda
+                                placeat
+                                quas ex necessitatibus vitae vero voluptatem quasi! Placeat, facere blanditiis! Sunt
+                                explicabo incidunt officiis delectus libero, distinctio quibusdam aut ab iure accusamus
+                                exercitationem voluptatem. Dolore sapiente corrupti quia repellat maiores ut ullam
+                                consequuntur repellendus aspernatur molestiae asperiores architecto magni, libero quos
+                                ab
+                                pariatur! Quod beatae ex dolores ipsam nulla nostrum nihil totam perferendis eum
+                                corporis!
+                                Rerum expedita soluta sequi dicta consectetur similique, esse sapiente iusto sit,
+                                officia
+                                suscipit temporibus aspernatur aut porro delectus, non quo. Molestiae ex vel,
+                                perferendis
+                                accusamus id recusandae tempore eum odio voluptatibus incidunt. Impedit inventore quasi
+                                voluptate cupiditate expedita? Accusamus impedit possimus ipsam necessitatibus optio,
+                                harum
+                                pariatur est ullam. Doloremque.
+                            </p>
+                            <div class="bottom-news-card">
+                                <img id="open-news-card" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card-container">
+                    <div class="news-card-title">
+                        <h2>Titre3</h2>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img">
+                            <img src="./assets/img/Not up to it_artwork_Kristel_BD.jpg" alt="Image de l'actualité">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="truncate-overflow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis
+                                exercitationem
+                                unde quisquam, perferendis labore optio error aspernatur iure, excepturi voluptate
+                                tempore
+                                ullam quae itaque voluptates distinctio animi sit rerum eligendi ipsam voluptatum
+                                dolorem
+                                quaerat aliquam. Autem, veniam. Et architecto est facilis omnis explicabo similique
+                                eligendi
+                                adipisci sit vel voluptas neque quae placeat optio laborum, pariatur unde nobis dolores
+                                doloremque beatae officia itaque eum ipsum. Saepe autem amet quam reiciendis. Quo
+                                assumenda
+                                quis molestias nulla rerum doloremque laboriosam harum, totam dolores magni esse
+                                aliquam!
+                                Nisi dolor fugiat est, harum earum aliquid corrupti recusandae incidunt assumenda
+                                placeat
+                                quas ex necessitatibus vitae vero voluptatem quasi! Placeat, facere blanditiis! Sunt
+                                explicabo incidunt officiis delectus libero, distinctio quibusdam aut ab iure accusamus
+                                exercitationem voluptatem. Dolore sapiente corrupti quia repellat maiores ut ullam
+                                consequuntur repellendus aspernatur molestiae asperiores architecto magni, libero quos
+                                ab
+                                pariatur! Quod beatae ex dolores ipsam nulla nostrum nihil totam perferendis eum
+                                corporis!
+                                Rerum expedita soluta sequi dicta consectetur similique, esse sapiente iusto sit,
+                                officia
+                                suscipit temporibus aspernatur aut porro delectus, non quo. Molestiae ex vel,
+                                perferendis
+                                accusamus id recusandae tempore eum odio voluptatibus incidunt. Impedit inventore quasi
+                                voluptate cupiditate expedita? Accusamus impedit possimus ipsam necessitatibus optio,
+                                harum
+                                pariatur est ullam. Doloremque.
+                            </p>
+                            <div class="bottom-news-card">
+                                <img id="open-news-card" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card-container">
+                    <div class="news-card-title">
+                        <h2>Titre4</h2>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-card-img">
+                            <img src="./assets/img/Not up to it_artwork_Kristel_BD.jpg" alt="Image de l'actualité">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="truncate-overflow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis
+                                exercitationem
+                                unde quisquam, perferendis labore optio error aspernatur iure, excepturi voluptate
+                                tempore
+                                ullam quae itaque voluptates distinctio animi sit rerum eligendi ipsam voluptatum
+                                dolorem
+                                quaerat aliquam. Autem, veniam. Et architecto est facilis omnis explicabo similique
+                                eligendi
+                                adipisci sit vel voluptas neque quae placeat optio laborum, pariatur unde nobis dolores
+                                doloremque beatae officia itaque eum ipsum. Saepe autem amet quam reiciendis. Quo
+                                assumenda
+                                quis molestias nulla rerum doloremque laboriosam harum, totam dolores magni esse
+                                aliquam!
+                                Nisi dolor fugiat est, harum earum aliquid corrupti recusandae incidunt assumenda
+                                placeat
+                                quas ex necessitatibus vitae vero voluptatem quasi! Placeat, facere blanditiis! Sunt
+                                explicabo incidunt officiis delectus libero, distinctio quibusdam aut ab iure accusamus
+                                exercitationem voluptatem. Dolore sapiente corrupti quia repellat maiores ut ullam
+                                consequuntur repellendus aspernatur molestiae asperiores architecto magni, libero quos
+                                ab
+                                pariatur! Quod beatae ex dolores ipsam nulla nostrum nihil totam perferendis eum
+                                corporis!
+                                Rerum expedita soluta sequi dicta consectetur similique, esse sapiente iusto sit,
+                                officia
+                                suscipit temporibus aspernatur aut porro delectus, non quo. Molestiae ex vel,
+                                perferendis
+                                accusamus id recusandae tempore eum odio voluptatibus incidunt. Impedit inventore quasi
+                                voluptate cupiditate expedita? Accusamus impedit possimus ipsam necessitatibus optio,
+                                harum
+                                pariatur est ullam. Doloremque.
+                            </p>
+                            <div class="bottom-news-card">
+                                <img id="open-news-card" src="./assets/ico/oeil_white.png" alt="Icône d'oeil">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-right-slide">
+                    <button id="news-next">></button>
+                </div>
             </div>
-            <div class="bottom-concerts-section">
-                <a href="" title="lien vers la page Concerts & Évènements"><img src="./assets/ico/oeil_black.png" alt="Icône d'oeil"></a>
+            <div class="news-carousel-markers">
+                <button class="news-marker" onclick="newsShowSlide(0)"></button>
+                <button class="news-marker" onclick="newsShowSlide(1)"></button>
+                <button class="news-marker" onclick="newsShowSlide(2)"></button>
+                <button class="news-marker" onclick="newsShowSlide(3)"></button>
+                <button class="news-marker" onclick="newsShowSlide(4)"></button>
+            </div>
+            <div class="bottom-news-section">
+                <a href="" title="lien vers la page Actualités"><img src="./assets/ico/oeil_white.png"
+                        alt="Icône d'oeil"></a>
             </div>
         </section>
     </main>
@@ -363,7 +692,6 @@
             <p><a href="">Mentions légales</a></p>
         </div>
     </footer>
-
 </body>
 
 </html>
